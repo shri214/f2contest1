@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arithmetic Calculator</title>
+    <style>
+      body {
+        background-color: rgb(205, 202, 202);
+      }
+      .container {
+        outline: 2px solid rgb(231, 226, 226);
+        background-color: rgb(237, 232, 232);
+        width: 50vw;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .group {
+        margin: 20px 0;
+        font-size: 1.5rem;
+      }
+      .group input {
+        width: 95%;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        padding: 0px 5px;
+      }
+      select {
+        width: 95%;
+        height: 40px;
+        border: 1.5px solid black;
+        border-radius: 10px;
+      }
+      option {
+        font-size: 1.2rem;
+      }
+      button {
+        height: 40px;
+        padding: 4px;
+        font-size: 1.5rem;
+        border-radius: 5px;
+      }
+      #result {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="group">
+        <label for="num1">Enter number 1:</label>
+        <input type="number" id="num1" name="num1" />
+      </div>
+      <div class="group">
+        <label for="num2">Enter number 2:</label>
+        <input type="number" id="num2" name="num2" />
+      </div>
+      <div class="group">
+        <label for="operator">Select an operator:</label>
+        <select id="operator" name="operator">
+          <option value="">--Select--</option>
+          <option value="+">Addition (+)</option>
+          <option value="-">Subtraction (-)</option>
+          <option value="*">Multiplication (*)</option>
+          <option value="/">Division (/)</option>
+        </select>
+      </div>
+
+      <button onclick="performOperations()">Calculate</button>
+
+      <p id="result">Result is :</p>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
